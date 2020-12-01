@@ -1,0 +1,22 @@
+@mixin style-text {
+
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+
+}
+
+@mixin border-radius {
+
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 12px;
+
+}
+
+@mixin padding($result) {
+
+  padding-left: $result;
+  padding-right: $result;
+
+}
