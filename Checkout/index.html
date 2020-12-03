@@ -10,6 +10,7 @@
 
   <title>Devchallenges | Checkout Page</title>
 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./dist/style.min.css">
 </head>
 
@@ -77,9 +78,80 @@
     </div>
 
     <div class="wrapper__form">
-      <form></form>
+      <form>
+        <div class="wrapper__form-contact">
+          <h2>Contact information</h2>
+
+          <div class="block-input">
+            <label for="email">E-mail</label>
+            <span class="material-icons icons">email</span>
+            <input type="email" name="email" placeholder="Enter your email..." required>
+          </div>
+
+          <div class="block-input">
+            <label for="phone">Phone</label>
+            <span class="material-icons icons">call</span>
+            <input type="number" name="phone" placeholder="Enter your phone..." required>
+          </div>
+        </div>
+
+        <div class="wrapper__form-address">
+          <h2>Shipping address</h2>
+
+          <div class="block-input">
+            <label for="name">Full name</label>
+            <span class="material-icons icons">account_circle</span>
+            <input type="text" name="name" placeholder="Your full name.." required>
+          </div>
+
+          <div class="block-input">
+            <label for="address">Address</label>
+            <span class="material-icons icons">home</span>
+            <input type="text" name="address" placeholder="Your address.." required>
+          </div>
+
+          <div class="block-input">
+            <label for="city">City</label>
+            <span class="material-icons icons">location_city</span>
+            <input type="text" name="city" placeholder="Your city.." required>
+          </div>
+
+          <div class="block-flex">
+            <div class="block-input">
+              <label for="country">Country</label>
+              <span class="material-icons icons">location_city</span>
+              <input list="country" name="country" placeholder="Your country.." required>
+              <datalist id="country">
+                <option value="Belgium"></option>
+                <option value="Brazil"></option>
+                <option value="Canada"></option>
+                <option value="China"></option>
+                <option value="France"></option>
+                <option value="United States"></option>
+              </datalist>
+            </div>
+
+            <div class="block-input">
+              <label for="postal">Postal code</label>
+              <span class="material-icons icons">apartment</span>
+              <input type="number" name="postal" placeholder="Your postal code.." required>
+            </div>
+          </div>
+        </div>
+
+        <div class="wrapper__form-save">
+          <input type="checkbox" name="save">
+          <label for="save">Save this information for next time</label>
+        </div>
+
+        <input type="submit" value="Continue">
+      </form>
     </div>
   </div>
+
+  <footer>
+    <p>Killian Thevenin @ DevChallenges.io</p>
+  </footer>
 
 </body>
 
