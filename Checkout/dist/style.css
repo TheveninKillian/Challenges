@@ -415,6 +415,13 @@ h1 {
   font-size: min(max(24px, 3vw), 32px);
 }
 
+h2 {
+  margin-bottom: 10px;
+  color: #333333;
+  font-size: min(max(14px, 3vw), 18px);
+  font-weight: 600;
+}
+
 hr {
   border: 1px solid #BDBDBD;
 }
@@ -496,4 +503,52 @@ hr {
 .wrapper__purchase-total .shipping p,
 .wrapper__purchase-total .total p {
   font-size: 14px;
+}
+.wrapper__form {
+  margin-top: 40px;
+}
+.wrapper__form-contact {
+  margin-bottom: 45px;
+}
+.wrapper__form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #4F4F4F;
+  font-size: min(max(10px, 3vw), 12px);
+}
+.wrapper__form input:not([type=checkbox]):not([type=submit]) {
+  height: min(max(40px, 3vw), 56px);
+  padding-left: 40px;
+  width: 100%;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  font-size: min(max(12px, 3vw), 16px);
+}
+.wrapper__form .block-flex {
+  position: relative;
+  display: flex;
+}
+.wrapper__form .block-flex input {
+  width: 48% !important;
+}
+.wrapper__form .block-flex .block-input:last-child {
+  position: absolute;
+  top: 0;
+  left: calc(100% - 48%);
+}
+.wrapper__form .block-input {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.wrapper__form .block-input .icons {
+  position: absolute;
+  top: 50.5%;
+  left: calc((40px / 2) - (15px / 2));
+  color: #828282;
+  font-size: 15px;
+}
+
+footer {
+  margin-top: 100px;
 }
