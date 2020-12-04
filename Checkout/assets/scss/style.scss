@@ -28,22 +28,28 @@ h2 {
 
   font-size: min(max(14px, 3vw), 18px);
   font-weight: 600;
+  transition: all .4s;
 }
 
 hr {
   border: 1px solid #BDBDBD;
+  opacity: .5;
 }
 
 .wrapper {
   &__purchase {
-    @include padding(20px);
+    margin-top: 40px;
 
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-top: 20px;
-
-    background-color: $backgroundOne;
     border-radius: 12px;
+
+    &-flex {
+      @include padding(20px);
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      background-color: $backgroundOne;
+      border-radius: 12px;
+    }
 
     &-item {
       display: flex;
@@ -56,13 +62,16 @@ hr {
         margin-right: 20px;
 
         border-radius: 20px;
+        transition: all .4s;
       }
 
       .container {
+        position: relative;
+
         h3 {
           margin-bottom: 10px;
 
-          font-size: 12px;
+          font-size: min(max(12px, 3vw), 16px);
           font-weight: 600;
         }
 
@@ -71,15 +80,19 @@ hr {
 
           color: $colorSecondary;
 
-          font-size: 14px;
+          font-size: min(max(14px, 3vw), 16px);
         }
 
         &__price-old {
-          font-size: 10px;
+          font-size: min(max(10px, 3vw), 12px);
           text-decoration-line: line-through;
         }
 
         &__quantity {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+
           display: flex;
           align-items: center;
           justify-content: space-around;
@@ -125,6 +138,7 @@ hr {
 
     &-total {
       margin-top: 60px;
+      transition: all .4s;
 
       .shipping,
       .total {
@@ -134,7 +148,9 @@ hr {
         color: $colorDarkThree;
 
         p {
-          font-size: 14px;
+          margin: 5px 0;
+
+          font-size: min(max(14px, 3vw), 18px);
         }
       }
     }
@@ -167,26 +183,31 @@ hr {
       font-size: min(max(12px, 3vw), 16px);
     }
 
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
     .block-flex {
       position: relative;
       display: flex;
+      justify-content: space-between;
 
-      input {
+      .block-input {
         width: 48% !important;
-      }
-
-      .block-input:last-child {
-        position: absolute;
-        top: 0;
-        left: calc(100% - 48%);
       }
     }
 
     .block-input {
       position: relative;
-      width: 100%;
 
       margin-bottom: 15px;
+      transition: all .4s;
 
       .icons {
         position: absolute;
@@ -195,12 +216,52 @@ hr {
 
         color: $colorDarkTwo;
 
-        font-size: 15px
+        font-size: 15px;
       }
+    }
+
+    &-save {
+      display: flex;
+
+      input {
+        margin-right: 10px
+      }
+
+      label {
+        line-height: 13px;
+
+        font-size: min(max(10px, 3vw), 12px);
+      }
+    }
+
+    input[type="submit"] {
+      position: relative;
+      left: calc(100% - 166px);
+
+      height: 54px;
+      margin-top: 20px;
+      width: 166px;
+
+      background: $colorSecondary;
+      border: none;
+      border-radius: 12px;
+      color: #fff;
+
+      font-weight: 600;
+      font-size: 16px;
     }
   }
 }
 
 footer {
-  margin-top: 100px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+
+  color: $colorDarkTwo;
+
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
 }
+
+@import './_responsive';
