@@ -459,6 +459,15 @@ hr {
   font-size: min(max(12px, 3vw), 16px);
   font-weight: 600;
 }
+.wrapper__purchase-item .container .dollar {
+  color: #F2994A;
+  font-size: min(max(14px, 3vw), 16px);
+}
+.wrapper__purchase-item .container .old {
+  font-size: min(max(10px, 3vw), 12px);
+  text-decoration-line: line-through;
+  color: #4E5150;
+}
 .wrapper__purchase-item .container__price-new {
   margin-right: 5px;
   color: #F2994A;

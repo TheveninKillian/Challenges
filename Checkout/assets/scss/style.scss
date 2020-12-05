@@ -75,6 +75,17 @@ hr {
           font-weight: 600;
         }
 
+        .dollar {
+          color: $colorSecondary;
+          font-size: min(max(14px, 3vw), 16px);
+        }
+
+        .old {
+          font-size: min(max(10px, 3vw), 12px);
+          text-decoration-line: line-through;
+          color: $colorDarkOne;
+        }
+
         &__price-new {
           margin-right: 5px;
 
