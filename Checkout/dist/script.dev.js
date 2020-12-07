@@ -53,3 +53,23 @@ function totalPrice(key, result) {
   var resultTotal = tabPrice.reduce(reducer, shippingPrice);
   total.textContent = "$".concat(resultTotal.toFixed(2));
 }
+
+(function () {
+  var form = document.querySelector("form");
+  var tooltip = document.querySelector(".tooltip");
+  var inputs = document.querySelectorAll("input[type=text], input[type=email], input[type=number], input[list]");
+  var inputCheck = document.querySelector("input[type=checkbox]");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    tooltip.style.opacity = 1;
+
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].value = "";
+    }
+
+    inputCheck.checked = false;
+    setTimeout(function () {
+      tooltip.style.opacity = 0;
+    }, 2000);
+  });
+})();
