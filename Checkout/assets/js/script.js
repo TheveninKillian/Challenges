@@ -2,6 +2,7 @@ const total = document.querySelector(".total-price");
 const shipping = document.querySelector(".shipping-price");
 const shippingPrice = 19;
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
 let items = document.querySelectorAll(".wrapper__purchase-item");
 let tabPrice = [];
 let resultTotal;
@@ -69,3 +70,29 @@ function totalPrice(key, result) {
 
   total.textContent = `$${resultTotal.toFixed(2)}`;
 }
+
+(function () {
+  const form = document.querySelector("form");
+  const tooltip = document.querySelector(".tooltip");
+
+  const inputs = document.querySelectorAll(
+    "input[type=text], input[type=email], input[type=number], input[list]"
+  );
+  const inputCheck = document.querySelector("input[type=checkbox]");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    tooltip.style.opacity = 1;
+
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].value = "";
+    }
+
+    inputCheck.checked = false;
+
+    setTimeout(() => {
+      tooltip.style.opacity = 0;
+    }, 2000);
+  });
+})();
