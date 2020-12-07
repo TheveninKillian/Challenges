@@ -1,7 +1,14 @@
-let items = document.querySelectorAll(".wrapper__purchase-item");
 const total = document.querySelector(".total-price");
+const shipping = document.querySelector(".shipping-price");
+const shippingPrice = 19;
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+let items = document.querySelectorAll(".wrapper__purchase-item");
+let tabPrice = [];
+let resultTotal;
 
-items.forEach((element) => {
+shipping.textContent = `$${shippingPrice}`;
+
+items.forEach((element, key) => {
   const container = element.childNodes[3];
 
   const price = container.childNodes[3];
@@ -15,6 +22,12 @@ items.forEach((element) => {
   const inputNum = quantity.childNodes[3];
   const btnUp = quantity.childNodes[5];
 
+  tabPrice.push(newPriceNum);
+
+  resultTotal = tabPrice.reduce(reducer, shippingPrice);
+
+  total.textContent = `$${resultTotal.toFixed(2)}`;
+
   btnUp.addEventListener("click", () => {
     inputNum.stepUp();
 
@@ -23,6 +36,8 @@ items.forEach((element) => {
 
     newPrice.textContent = resultNew.toFixed(2);
     oldPrice.textContent = resultOld.toFixed(2);
+
+    totalPrice(key, resultNew.toFixed(2));
   });
 
   btnDown.addEventListener("click", () => {
@@ -41,6 +56,16 @@ items.forEach((element) => {
 
       newPrice.textContent = resultNew.toFixed(2);
       oldPrice.textContent = resultOld.toFixed(2);
+
+      totalPrice(key, resultNew.toFixed(2));
     }
   });
 });
+
+function totalPrice(key, result) {
+  tabPrice.splice(key, 1, parseFloat(result));
+
+  let resultTotal = tabPrice.reduce(reducer, shippingPrice);
+
+  total.textContent = `$${resultTotal.toFixed(2)}`;
+}
