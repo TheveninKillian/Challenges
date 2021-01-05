@@ -102,3 +102,9 @@
     }
   }
 }
+
+@media screen and (min-height: 730px) and (orientation: portrait) {
+  body {
+    height: calc(100vh - 60px);
+  }
+}
