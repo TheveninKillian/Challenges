@@ -89,7 +89,7 @@ h1 {
 }
 
 .gallery {
-  margin-top: 40px;
+  margin-top: min(max(40px, 4vw), 60px);
 
   &__grid {
     display: grid;
@@ -151,6 +151,18 @@ h1 {
 
       transition: width 1s;
     }
+  }
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+
+  p {
+    color: #A9A9A9;
+
+    font-size: 14px;
+    font-weight: 600;
   }
 }
 
