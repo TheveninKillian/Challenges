@@ -137,7 +137,7 @@ const app = Vue.createApp({
       let newItem = {};
       newItem.todo = text;
       newItem.completed = 'no-completed';
-      newItem.id = 'tab-' + this.initId++;
+      newItem.id = 'tab-' + ++this.initId;
 
       this.items.push(newItem);
 
