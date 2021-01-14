@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+  <link rel="icon" href="devchallenges.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <title>Todo List</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>#todo</h1>
+  </header>
+
+  <section id="app">
+    <div class="container_btn">
+      <div class="container_btn-text">
+        <button v-for="tab in tabs" :key="tab.name" class="btnTab"
+          :class="tab.class, { active: currentTab === tab.name }"
+          @click="currentTab = tab.name, tabNavigation()">{{ tab.name }}</button>
+      </div>
+
+      <div class="container_btn-border">
+        <div v-for="tab in tabs" :key="tab.name" :class="{ active: currentTab === tab.name }">{{ tab.name }}</div>
+      </div>
+    </div>
+
+    <div class="container_input" id="blocBar" v-if="currentTab !== 'Completed'">
+      <input type="text" name="addItem" id="addItem" v-model="inputValue" placeholder="add details">
+      <button id="submit" @click="addNewItem(inputValue)">Add</button>
+    </div>
+
+    <div class="container">
+      <ul>
+        <li v-for="item in items" :key="item.id" :class="item.completed">
+          <input type="checkbox" :id="item.id" :value="item.id" v-model="checkedItems" @click="checkItem(item)">
+          <label :for="item.id">{{ item.todo }}</label>
+          <i class="material-icons" v-if="currentTab === 'Completed'" @click="delItem(item)">delete_outlined</i>
+        </li>
+      </ul>
+
+      <div class="btn-all" v-if="currentTab === 'Completed'">
+        <button @click="delAll()"><i class="material-icons">delete_outlined</i> <span>delete all</span></button>
+      </div>
+    </div>
+  </section>
+
+  <footer>Killian Thevenin @ DevChallenges.io</footer>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
