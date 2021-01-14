@@ -42,6 +42,10 @@ const app = Vue.createApp({
     if (this.storageItems !== null) {
       this.items = JSON.parse(this.storageItems);
     }
+
+    if (localStorage.getItem('initId')) {
+      this.initId = localStorage.getItem('initId');
+    }
   },
   updated() {
     if (this.items.length === 0) {
@@ -144,6 +148,7 @@ const app = Vue.createApp({
       this.inputValue = '';
       let stringItems = JSON.stringify(this.items);
       localStorage.setItem('items', stringItems);
+      localStorage.setItem('initId', this.initId);
     },
     backupStorage() {
       let stringCheckItems = this.checkedItems.toString();
