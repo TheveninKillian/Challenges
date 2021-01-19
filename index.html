@@ -5,16 +5,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Challenges Killian</title>
+  <link rel="stylesheet" href="bulma.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <h1>Challenges projects</h1>
+  <h1> My challenges projects</h1>
 
-  <a href="./Checkout/index.html">Checkout</a>
-  <br>
-  <a href="./Gallery/index.html">Gallery</a>
-  <br>
-  <a href="./Todo/index.html">Todo</a>
+  <div id="app">
+    <section id="devchallenges">
+      <div class="sub-title">
+        <a href="https://devchallenges.io/">
+          <h2><img src="./devchallenges.png"> DevChallenges.io</h2>
+        </a>
+      </div>
+
+      <div class="flex">
+        <card-project v-for="project in projects" :src-img="project.srcImg" :link-url="project.linkUrl"
+          :title="project.title"></card-project>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
