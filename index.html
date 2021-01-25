@@ -14,12 +14,6 @@
 
   <div id="app">
     <section id="devchallenges">
-      <div class="sub-title">
-        <a href="https://devchallenges.io/">
-          <h2><img src="./devchallenges.png"> DevChallenges.io</h2>
-        </a>
-      </div>
-
       <div class="flex">
         <card-project v-for="project in projects" :src-img="project.srcImg" :link-url="project.linkUrl"
           :title="project.title"></card-project>

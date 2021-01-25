@@ -21,27 +21,8 @@ div#app{
   margin: 0 15px;
 }
 
-.sub-title{
-  position: relative;
-  height: 30px;
-  line-height: 30px;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #fff;
-}
-
-.sub-title h2{
-  font-size: 22px;
-  margin-left: 25px;
-  color: #F0402C;
-  display: inline-block;
-}
-
-.sub-title img{
-  position: absolute;
-  left: 0;
-  top: 5px;
-  width: 22px;
+section{
+  margin-top: 35px;
 }
 
 .flex{
@@ -81,7 +62,6 @@ div#app{
   color: #fff;
 }
 
-.sub-title h2:hover,
 .card-project:hover .details-project
 {
   color: #3273dc;
@@ -106,15 +86,14 @@ div#app{
   }
 }
 
-@media all and (min-width: 1216px){
+@media all and (min-width: 1024px){
   section{
-    width: calc(325px * 3);
-    margin: auto;
+    padding-left: calc(50vw - 1024px);
+    padding-right: calc(50vw - 1024px);
   }
+}
 
-  .flex{
-    justify-content: flex-start;
-  }
+@media all and (min-width: 1216px){
 
   .card-project{
     margin: 0 25px 25px 0;
@@ -124,6 +103,6 @@ div#app{
 @media all and (min-width: 1360px){
   section{
     width: 1325px;
-    margin: auto;
+    margin: 35px auto 0;
   }
 }

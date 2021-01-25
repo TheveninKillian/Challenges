@@ -17,6 +17,11 @@ const app = Vue.createApp({
           linkUrl: './Todo/index.html',
           title: 'Todo List',
         },
+        {
+          srcImg: './Dashboard/public/screenshot.png',
+          linkUrl: './Dashboard/dist/index.html',
+          title: 'Dashboard',
+        },
       ],
     };
   },
