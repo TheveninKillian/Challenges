@@ -1,0 +1,35 @@
+$primary-green: hsl(163, 72%, 41%);
+$primary-red: hsl(356, 69%, 56%);
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(0.25turn, #fdc468, #df4996);
+$youtube: hsl(348, 97%, 39%);
+
+//Toggle White to Dark theme
+$dark: linear-gradient(#378fe6, #3eda82);
+$light: hsl(230, 22%, 74%);
+
+//Neutral Dark
+// Very Dark Blue (BG)
+$dark-blue-bg: hsl(230, 17%, 14%);
+// Very Dark Blue (Top BG Pattern) 
+$dark-blue-top: hsl(232, 19%, 15%);
+// Dark Desaturated Blue (Card BG)
+$dark-desaturated-blue: hsl(228, 28%, 20%);
+// Desaturated Blue (Text)
+$desaturated-blue: hsl(228, 34%, 66%);
+// White (Text)
+$white-text: hsl(0, 0%, 100%);
+
+//Neutral Light
+// White (BG): hsl(0, 0%, 100%) = $white-text: hsl(0, 0%, 100%);
+// Very Pale Blue (Top BG Pattern)
+$pale-blue: hsl(225, 100%, 98%);
+// Light Grayish Blue (Card BG)
+$light-grayish-blue: hsl(227, 47%, 96%);
+// Dark Grayish Blue (Text)
+$dark-grayish-blue:hsl(228, 12%, 44%);
+// Very Dark Blue (Text): hsl(230, 17%, 14%) = $dark-blue-bg: hsl(230, 17%, 14%);
+
+$font: 'Inter',
+sans-serif;

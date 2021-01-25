@@ -1,0 +1,35 @@
+.dark-mode {
+  background: $dark-blue-bg;
+
+  .hero {
+
+    .big-card,
+    .little-card {
+      background-color: $dark-desaturated-blue;
+
+      &:hover {
+        background-color: hsl(228, 28%, 25%);
+      }
+    }
+
+    .header .header__title span,
+    .header .header__btn-toggle,
+    .big-card .big-card__name,
+    .big-card .big-card__text,
+    .subtitle,
+    .little-card p {
+      color: $desaturated-blue;
+    }
+
+    .header .header__title h1,
+    .big-card .big-card__number,
+    .little-card .little-card__number,
+    .attribution {
+      color: $white-text;
+    }
+
+    .header .header__btn-toggle .tgl-light+.tgl-btn:after {
+      background: $dark-blue-bg;
+    }
+  }
+}
