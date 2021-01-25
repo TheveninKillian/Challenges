@@ -8,7 +8,7 @@
     <div class="little-card__wrapper">
       <img class="icon-reseaux" :src="icon" alt='icon' width="20" height="20">
       <div class="little-card__stat">
-        <img :src="variation">
+        <img :src="variation" :alt="altIcon(variation)">
         <span :class="classVariation">{{ statNumber + '%' }}</span>
       </div>
     </div>
@@ -40,7 +40,16 @@
           return numString.substring(0, 2) + "K"
         }
       }
-    }
+    },
+    methods: {
+      altIcon(variation){
+        if(variation === 'img/icon-up.svg'){
+          return 'icon up'
+        }else{
+          return 'icon down'
+        }
+      }
+    },
   }
 </script>
 

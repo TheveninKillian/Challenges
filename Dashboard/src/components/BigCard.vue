@@ -12,7 +12,7 @@
     <div class="big-card__text">Followers</div>
 
     <div class="big-card__stat">
-      <img :src="variation">
+      <img :src="variation" :alt="altIcon(variation)">
       <span :class="classVariation">{{ statnumber }} Today</span>
     </div>
   </div>
@@ -21,6 +21,11 @@
 <script>
   export default {
     name: 'BigCard',
+    data() {
+      return {
+        altIconVariation: ''
+      }
+    },
     props: {
       icon: String,
       title: String,
@@ -43,7 +48,16 @@
           return numString.substring(0, 2) + "K"
         }
       }
-    }
+    },
+    methods: {
+      altIcon(variation){
+        if(variation === 'img/icon-up.svg'){
+          return 'icon up'
+        }else{
+          return 'icon down'
+        }
+      }
+    },
   }
 </script>
 
