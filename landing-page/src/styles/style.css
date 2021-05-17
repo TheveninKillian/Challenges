@@ -1,0 +1,44 @@
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html.dark {
+  background: #121212;
+  color: #fff;
+}
+
+a{
+  cursor: pointer;
+}
+
+button{
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  border-radius: .25rem;
+  display: inline-block;
+  --tw-bg-opacity: 1;
+  background-color: rgba(13,148,136,var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgba(255,255,255,var(--tw-text-opacity));
+  cursor: pointer;
+}
+
+#app{
+  padding-top: 45px;
+
+  text-align: center;
+}
+
+.nav{
+  @apply flex justify-center;
+}
+
+.nav a{
+  margin: 0 15px;
+}
