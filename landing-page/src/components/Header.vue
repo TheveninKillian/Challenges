@@ -1,6 +1,6 @@
 <template>
   <header class="flex justify-between items-center py-8">
-    <h1 class="cursor-pointer">spence</h1>
+    <h1 class="cursor-pointer font-extrabold">spense.</h1>
 
     <div class="header__hbg">
       <img
@@ -11,16 +11,16 @@
 
     <nav class="header__nav">
       <ul class="flex">
-        <li>Business</li>
-        <li>Pricing</li>
+        <li class="mr-6 ml-6">Business</li>
+        <li class="mr-6">Pricing</li>
         <li>Features</li>
       </ul>
     </nav>
 
     <nav class="header__nav">
-      <ul class="flex">
-        <li>Login</li>
-        <li>Get Started</li>
+      <ul class="flex items-center">
+        <li class="mr-6">Login</li>
+        <li class="btn">Get Started</li>
       </ul>
     </nav>
   </header>
@@ -46,6 +46,8 @@
     }
 
     li {
+      font-weight: bold;
+
       cursor: pointer;
     }
   }
