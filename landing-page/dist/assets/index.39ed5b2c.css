@@ -31,7 +31,7 @@
   width: 24px;
   height: 24px;
   margin-right: 15px;
-  background-image: url('./assets/Checkmark.a4c1de91.svg');
+  background-image: url('./Checkmark.a4c1de91.svg');
 }
 @media (min-width: 768px) {
   .hero__img {
