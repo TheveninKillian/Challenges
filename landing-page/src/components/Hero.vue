@@ -25,7 +25,7 @@
           placeholder="john@example.com"
           class="w-170px border border-gray-400 py-4 pl-5 mr-3 rounded-md"
         />
-        <input type="submit" value="Get Started" class="btn" />
+        <input type="submit" value="Get Started" class="btn cursor-pointer" />
       </div>
     </div>
   </section>
