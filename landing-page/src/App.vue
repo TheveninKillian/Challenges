@@ -19,7 +19,7 @@
     <img src="./assets/images/Slack Logo.png" class="slack" />
   </div>
 
-  <div class="section">
+  <section class="section">
     <div class="escrow rounded-lg">
       <div class="escrow__text">
         <h2 class="font-bold">Secure your money with Escrow.</h2>
@@ -30,14 +30,31 @@
           worry about scams.
         </p>
 
-        <p class="mt-3 underline">Learn more about Escrow -></p>
+        <p class="mt-3 underline font-bold">Learn more about Escrow -></p>
       </div>
 
       <div class="escrow__img">
         <img src="./assets/images/Phone Mockup.png" />
       </div>
     </div>
-  </div>
+
+    <div class="editor mt-10">
+      <div class="editor__text">
+        <h2 class="font-bold">A text editor like no other.</h2>
+
+        <p class="opacity-70 mt-2">
+          Our text editor pulls you into focus mode with it's simplistic design
+          and usability so you can put out your best writings.
+        </p>
+
+        <p class="mt-3 underline font-bold">Text Editor Live Demo -></p>
+      </div>
+
+      <div class="editor__img">
+        <img src="./assets/images/Text Editor.png" />
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss">
@@ -86,63 +103,107 @@
   background-color: #f0eeeb;
 }
 
-.section .escrow {
-  padding: 2rem 2rem 0 2rem;
-
-  background-color: #f0eeeb;
-
-  @include breakpoint(sm) {
-    height: 650px;
-    padding: 4rem 6rem 0 6rem;
-
-    overflow: hidden;
+.section {
+  .escrow,
+  .editor {
+    &__text {
+      h2 {
+        @include breakpoint(sm) {
+          font-size: 2.5rem;
+          line-height: 3rem;
+        }
+      }
+    }
   }
 
-  @include breakpoint(md) {
-    display: flex;
-    align-items: center;
+  .escrow {
+    padding: 2rem 2rem 0 2rem;
 
-    height: auto;
-    padding: 2.5rem 1.5rem 0 4rem;
-  }
+    background-color: #f0eeeb;
 
-  &__text {
+    @include breakpoint(sm) {
+      height: 650px;
+      padding: 4rem 6rem 0 6rem;
+
+      overflow: hidden;
+    }
+
     @include breakpoint(md) {
-      width: 55%;
+      display: flex;
+      align-items: center;
+
+      height: auto;
+      padding: 2.5rem 1.5rem 0 4rem;
     }
 
-    @include breakpoint(xl) {
-      padding-right: 12%;
+    &__text {
+      @include breakpoint(md) {
+        width: 55%;
+      }
+
+      @include breakpoint(xl) {
+        padding-right: 12%;
+      }
+
+      h2 {
+        width: 80%;
+
+        @include breakpoint(md) {
+          width: 100%;
+        }
+      }
     }
 
-    h2 {
-      width: 80%;
+    &__img {
+      margin-top: 1.5rem;
 
       @include breakpoint(sm) {
-        font-size: 2.5rem;
-        line-height: 3rem;
+        margin-top: 2.5rem;
       }
 
       @include breakpoint(md) {
+        margin-top: 0;
+        width: 45%;
+      }
+
+      img {
         width: 100%;
       }
     }
   }
 
-  &__img {
-    margin-top: 1.5rem;
-
-    @include breakpoint(sm) {
-      margin-top: 2.5rem;
-    }
-
+  .editor {
     @include breakpoint(md) {
-      margin-top: 0;
-      width: 45%;
+      display: flex;
+      align-items: center;
     }
 
-    img {
-      width: 100%;
+    &__text {
+      order: 1;
+
+      @include breakpoint(md) {
+        width: 40%;
+      }
+
+      @include breakpoint(xl) {
+        width: 38%;
+      }
+    }
+
+    &__img {
+      margin-top: 2rem;
+
+      @include breakpoint(md) {
+        width: 60%;
+      }
+
+      @include breakpoint(xl) {
+        width: 62%;
+      }
+
+      img {
+        width: 100%;
+      }
     }
   }
 }
