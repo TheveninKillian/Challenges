@@ -55,6 +55,8 @@
       </div>
     </div>
   </section>
+
+  <Footer />
 </template>
 
 <style lang="scss">
@@ -62,7 +64,8 @@
 
 .main,
 .banner-social,
-.section {
+.section,
+footer {
   padding-left: calc(50vw - 170px);
   padding-right: calc(50vw - 170px);
 
