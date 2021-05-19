@@ -22,6 +22,11 @@ const app = Vue.createApp({
           linkUrl: './Dashboard/dist/index.html',
           title: 'Dashboard',
         },
+        {
+          srcImg: './landing-page/screenshot.png',
+          linkUrl: './landing-page/dist/index.html',
+          title: 'Landing Page',
+        },
       ],
     };
   },
