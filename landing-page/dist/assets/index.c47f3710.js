@@ -30,7 +30,7 @@ const r = {},
     { class: 'header__hbg' },
     [
       g('img', {
-        src: '/assets/Hamburger-Menu.0d268974.svg',
+        src: './assets/Hamburger-Menu.0d268974.svg',
         alt: 'menu de navigation pour mobile',
       }),
     ],
