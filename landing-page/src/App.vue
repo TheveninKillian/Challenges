@@ -9,14 +9,14 @@
   </div>
 
   <div class="banner-social flex justify-between py-10">
-    <img src="./assets/images/Facebook Logo.png" />
-    <img src="./assets/images/Dribbble Logo.png" />
-    <img src="./assets/images/Youtube Logo.png" />
-    <img src="./assets/images/Pinterest Logo.png" class="pinterest" />
-    <img src="./assets/images/Twitter Logo.png" class="twitter" />
-    <img src="./assets/images/Reddit Logo.png" class="reddit" />
-    <img src="./assets/images/Google Logo.png" class="google" />
-    <img src="./assets/images/Slack Logo.png" class="slack" />
+    <img src="./assets/images/Facebook-Logo.png" />
+    <img src="./assets/images/Dribbble-Logo.png" />
+    <img src="./assets/images/Youtube-Logo.png" />
+    <img src="./assets/images/Pinterest-Logo.png" class="pinterest" />
+    <img src="./assets/images/Twitter-Logo.png" class="twitter" />
+    <img src="./assets/images/Reddit-Logo.png" class="reddit" />
+    <img src="./assets/images/Google-Logo.png" class="google" />
+    <img src="./assets/images/Slack-Logo.png" class="slack" />
   </div>
 
   <section class="section">
@@ -34,7 +34,7 @@
       </div>
 
       <div class="escrow__img">
-        <img src="./assets/images/Phone Mockup.png" />
+        <img src="./assets/images/Phone-Mockup.png" />
       </div>
     </div>
 
@@ -51,7 +51,7 @@
       </div>
 
       <div class="editor__img">
-        <img src="./assets/images/Text Editor.png" />
+        <img src="./assets/images/Text-Editor.png" />
       </div>
     </div>
   </section>

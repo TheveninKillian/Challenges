@@ -4,7 +4,7 @@
 
     <div class="header__hbg">
       <img
-        src="../assets/images/Hamburger Menu.svg"
+        src="../assets/images/Hamburger-Menu.svg"
         alt="menu de navigation pour mobile"
       />
     </div>

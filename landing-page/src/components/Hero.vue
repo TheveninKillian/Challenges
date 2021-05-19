@@ -1,7 +1,7 @@
 <template>
   <section class="hero">
     <div class="hero__img">
-      <img src="../assets/images/Hero Image.png" />
+      <img src="../assets/images/Hero-Image.png" />
     </div>
 
     <div class="hero__wrapper">
